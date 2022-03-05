@@ -1,0 +1,49 @@
+site_name: ML_TOOLS_SDK
+theme:
+    name: material
+    features:
+    - content.code.annotate 
+
+#theme: mkdocs
+# Navigation
+features:
+    tabs: true
+nav:
+    - General: index.md
+    - Data Analysis:
+            - General_Data Analysis: general_data_analysis.md
+
+extra_css:
+    - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
+    - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
+    - "css/custom.css"
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js
+    - javascripts/config.js
+
+markdown_extensions:
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.tabbed
+    - admonition
+    - def_list
+    - codehilite:
+        linenums: true
+        noclasses: true
+        linenums: false
+        pygments_style: colorful
+    - toc:
+        permalink: true
+    - markdown_katex:
+        no_inline_svg: True
+        insert_fonts_css: True
+
+# Copyright
+copyright: 
+    (c) 2021 BrainSnacks, All rights reserved.
+    
