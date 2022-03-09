@@ -1,0 +1,1154 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+    
+    
+      
+        <title>NLP Basic - MY_PYTHON_TOOLS_SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nlp-basic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MY_PYTHON_TOOLS_SDK" class="md-header__button md-logo" aria-label="MY_PYTHON_TOOLS_SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MY_PYTHON_TOOLS_SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NLP Basic
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MY_PYTHON_TOOLS_SDK" class="md-nav__button md-logo" aria-label="MY_PYTHON_TOOLS_SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MY_PYTHON_TOOLS_SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Bash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bash" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Bash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_command/" class="md-nav__link">
+        Git Command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Data Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Analysis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general_data_analysis/" class="md-nav__link">
+        General Data Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numpy_basic/" class="md-nav__link">
+        Numpy Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas_basic/" class="md-nav__link">
+        Pandas Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualize_basic/" class="md-nav__link">
+        Matplot/Seaborn Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sk_basic/" class="md-nav__link">
+        Scikit-learn Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NLP Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        NLP Basic
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テキストのクリーニング(ピリオドの削除/大文字変換/正規抽出値の変換)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTMLのパースとクリーニング
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    句読点の除去
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    テキストのトークン化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ストップワードの除去（助詞の削除)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    語幹の抽出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    品詞のタグ付け
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bow" class="md-nav__link">
+    BoWによるテキストエンコーディング
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tfidf" class="md-nav__link">
+    単語への重み付け（TFIDF)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    全角・半角への変換
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ts_basic/" class="md-nav__link">
+        Time-series Basic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          ML Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ML Model" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ML Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lgb_template_reg/" class="md-nav__link">
+        LGBM Reg Templete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lgb_template_cls/" class="md-nav__link">
+        LGBM Cls Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        Stats Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nn/" class="md-nav__link">
+        NN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        NLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeseries/" class="md-nav__link">
+        Time Series
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Others
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Others" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_scrp/" class="md-nav__link">
+        Web Scriping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cas_inf/" class="md-nav__link">
+        Casual Inference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テキストのクリーニング(ピリオドの削除/大文字変換/正規抽出値の変換)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTMLのパースとクリーニング
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    句読点の除去
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    テキストのトークン化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ストップワードの除去（助詞の削除)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    語幹の抽出
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    品詞のタグ付け
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bow" class="md-nav__link">
+    BoWによるテキストエンコーディング
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tfidf" class="md-nav__link">
+    単語への重み付け（TFIDF)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    全角・半角への変換
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="nlp-basic">NLP Basic<a class="headerlink" href="#nlp-basic" title="Permanent link">&para;</a></h1>
+<h3 id="_1">テキストのクリーニング(ピリオドの削除/大文字変換/正規抽出値の変換)<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">text_data</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;   Interrobang. By Aishwarya Henriette     &quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>             <span class="s2">&quot;Parking And Going. By Karl Gautier&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>             <span class="s2">&quot;    Today Is The night. By Jarek Prakash   &quot;</span><span class="p">]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># ホワイトスペースを削除</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">strip_whitespace</span> <span class="o">=</span> <span class="p">[</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">text_data</span><span class="p">]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># テキストを表示</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">strip_whitespace</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1">##########</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1"># ピリオドを削除</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">remove_periods</span> <span class="o">=</span> <span class="p">[</span><span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">strip_whitespace</span><span class="p">]</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1"># テキストを表示</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">remove_periods</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="c1">##########</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="c1"># 関数を定義</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="k">def</span> <span class="nf">capitalizer</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="c1"># 関数を適用</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">[</span><span class="n">capitalizer</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">remove_periods</span><span class="p">]</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="c1">##########</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="kn">import</span> <span class="nn">re</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="c1"># 関数を定義</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="k">def</span> <span class="nf">replace_letters_with_X</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-zA-Z]&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="c1"># 関数を適用</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="p">[</span><span class="n">replace_letters_with_X</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">remove_periods</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="html">HTMLのパースとクリーニング<a class="headerlink" href="#html" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1"># HTMLテキストを作成</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="s2">       &lt;div class=&#39;full_name&#39;&gt;&lt;span style=&#39;font-weight:bold&#39;&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="s2">       Masego&lt;/span&gt; Azra&lt;/div&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="s2">       &quot;&quot;&quot;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1"># HTMLをパース</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="c1"># classが&quot;full_name&quot;となっているdivを見つけて、そのテキストを表示</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;class&quot;</span> <span class="p">:</span> <span class="s2">&quot;full_name&quot;</span> <span class="p">})</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="_2">句読点の除去<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span> <span class="nn">unicodedata</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1"># テキストを作成</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">text_data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hi!!!! I. Love. This. Song....&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>             <span class="s1">&#39;10000% Agree!!!! #LoveIT&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>             <span class="s1">&#39;Right?!?!&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1"># 句読点文字を含む辞書を作成</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">punctuation</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxunicode</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>                            <span class="k">if</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">category</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">))</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">))</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1"># それぞれの文字列から、句読点文字をすべて除去</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="p">[</span><span class="n">string</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">punctuation</span><span class="p">)</span> <span class="k">for</span> <span class="n">string</span> <span class="ow">in</span> <span class="n">text_data</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="_3">テキストのトークン化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># 最初の1回は下のコメント外してリソースをダウンロード</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># import nltk</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># nltk.download(&#39;punkt&#39;)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;The science of today is the technology of tomorrow&quot;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># 単語単位でトークン化</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">word_tokenize</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1">##########</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;The science of today is the technology of tomorrow. Tomorrow is today.&quot;</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="c1"># 文章単位でトークン化</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_4">ストップワードの除去（助詞の削除)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># 単語トークンを作成</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">tokenized_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;am&#39;</span><span class="p">,</span> <span class="s1">&#39;humbled&#39;</span><span class="p">,</span> <span class="s1">&#39;by&#39;</span><span class="p">,</span> <span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="s1">&#39;traditional&#39;</span><span class="p">,</span> <span class="s1">&#39;meeting&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c1"># 語幹抽出器を作成</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">porter</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="c1"># 語幹抽出器を適用</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">[</span><span class="n">porter</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokenized_words</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="_5">語幹の抽出<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1"># 単語トークンを作成</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">tokenized_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;am&#39;</span><span class="p">,</span> <span class="s1">&#39;humbled&#39;</span><span class="p">,</span> <span class="s1">&#39;by&#39;</span><span class="p">,</span> <span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="s1">&#39;traditional&#39;</span><span class="p">,</span> <span class="s1">&#39;meeting&#39;</span><span class="p">]</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="c1"># 語幹抽出器を作成</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="n">porter</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="c1"># 語幹抽出器を適用</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">[</span><span class="n">porter</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokenized_words</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="_6">品詞のタグ付け<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kn">import</span> <span class="nn">nltk</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">pos_tag</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1"># 最初の1回は下のコメント外してリソースをダウンロード</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1"># nltk.download(&#39;averaged_perceptron_tagger&#39;)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="n">text_data</span> <span class="o">=</span> <span class="s2">&quot;Chris loved outdoor running&quot;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1"># 訓練済み品詞タグ付け器を適用</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="n">text_tagged</span> <span class="o">=</span> <span class="n">pos_tag</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text_data</span><span class="p">))</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="c1"># 品詞を表示</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="n">text_tagged</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="c1">##########</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="c1"># 品詞を用いて単語を選択</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">text_tagged</span> <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;NN&#39;</span><span class="p">,</span><span class="s1">&#39;NNS&#39;</span><span class="p">,</span><span class="s1">&#39;NNP&#39;</span><span class="p">,</span><span class="s1">&#39;NNPS&#39;</span><span class="p">]</span> <span class="p">]</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="c1">##########</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MultiLabelBinarizer</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="n">tweets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;I am eating a burrito for breakfast&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a>          <span class="s2">&quot;Political science is an amazing field&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a>          <span class="s2">&quot;San Francisco is an awesome city&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="c1"># リストを作成</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="n">tagged_tweets</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="c1"># ツイート中の単語にタグ付け</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a><span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a>    <span class="n">tweet_tag</span> <span class="o">=</span> <span class="n">pos_tag</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">tweet</span><span class="p">))</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a>    <span class="n">tagged_tweets</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">tag</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">tweet_tag</span><span class="p">])</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41"></a>
+<a id="__codelineno-6-42" name="__codelineno-6-42"></a><span class="c1"># ワンホットエンコードを用いて、タグを特徴量に変換</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="n">one_hot_multi</span> <span class="o">=</span> <span class="n">MultiLabelBinarizer</span><span class="p">()</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44"></a><span class="n">one_hot_multi</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tagged_tweets</span><span class="p">)</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45"></a>
+<a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="c1">##########</span>
+<a id="__codelineno-6-47" name="__codelineno-6-47"></a>
+<a id="__codelineno-6-48" name="__codelineno-6-48"></a><span class="c1"># 特徴量名を表示</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="n">one_hot_multi</span><span class="o">.</span><span class="n">classes_</span>
+<a id="__codelineno-6-50" name="__codelineno-6-50"></a>
+<a id="__codelineno-6-51" name="__codelineno-6-51"></a><span class="c1">##########</span>
+<a id="__codelineno-6-52" name="__codelineno-6-52"></a>
+<a id="__codelineno-6-53" name="__codelineno-6-53"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-6-54" name="__codelineno-6-54"></a><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">brown</span>
+<a id="__codelineno-6-55" name="__codelineno-6-55"></a><span class="kn">from</span> <span class="nn">nltk.tag</span> <span class="kn">import</span> <span class="n">UnigramTagger</span>
+<a id="__codelineno-6-56" name="__codelineno-6-56"></a><span class="kn">from</span> <span class="nn">nltk.tag</span> <span class="kn">import</span> <span class="n">BigramTagger</span>
+<a id="__codelineno-6-57" name="__codelineno-6-57"></a><span class="kn">from</span> <span class="nn">nltk.tag</span> <span class="kn">import</span> <span class="n">TrigramTagger</span>
+<a id="__codelineno-6-58" name="__codelineno-6-58"></a>
+<a id="__codelineno-6-59" name="__codelineno-6-59"></a><span class="c1"># 最初の1回は下のコメント外してリソースをダウンロード</span>
+<a id="__codelineno-6-60" name="__codelineno-6-60"></a><span class="c1"># nltk.download(&#39;brown&#39;)</span>
+<a id="__codelineno-6-61" name="__codelineno-6-61"></a>
+<a id="__codelineno-6-62" name="__codelineno-6-62"></a><span class="c1"># Brown Corpusからテキストを取得して文章に分割</span>
+<a id="__codelineno-6-63" name="__codelineno-6-63"></a><span class="n">sentences</span> <span class="o">=</span> <span class="n">brown</span><span class="o">.</span><span class="n">tagged_sents</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="s1">&#39;news&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-64" name="__codelineno-6-64"></a>
+<a id="__codelineno-6-65" name="__codelineno-6-65"></a><span class="c1"># 4000文を訓練データに、残り623文をテストデータに</span>
+<a id="__codelineno-6-66" name="__codelineno-6-66"></a><span class="n">train</span> <span class="o">=</span> <span class="n">sentences</span><span class="p">[:</span><span class="mi">4000</span><span class="p">]</span>
+<a id="__codelineno-6-67" name="__codelineno-6-67"></a><span class="n">test</span> <span class="o">=</span> <span class="n">sentences</span><span class="p">[</span><span class="mi">4000</span><span class="p">:]</span>
+<a id="__codelineno-6-68" name="__codelineno-6-68"></a>
+<a id="__codelineno-6-69" name="__codelineno-6-69"></a><span class="c1"># バックオフ付きタグ付け器を作成</span>
+<a id="__codelineno-6-70" name="__codelineno-6-70"></a><span class="n">unigram</span> <span class="o">=</span> <span class="n">UnigramTagger</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+<a id="__codelineno-6-71" name="__codelineno-6-71"></a><span class="n">bigram</span> <span class="o">=</span> <span class="n">BigramTagger</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">backoff</span><span class="o">=</span><span class="n">unigram</span><span class="p">)</span>
+<a id="__codelineno-6-72" name="__codelineno-6-72"></a><span class="n">trigram</span> <span class="o">=</span> <span class="n">TrigramTagger</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">backoff</span><span class="o">=</span><span class="n">bigram</span><span class="p">)</span>
+<a id="__codelineno-6-73" name="__codelineno-6-73"></a>
+<a id="__codelineno-6-74" name="__codelineno-6-74"></a><span class="c1"># 精度を表示</span>
+<a id="__codelineno-6-75" name="__codelineno-6-75"></a><span class="n">trigram</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="bow">BoWによるテキストエンコーディング<a class="headerlink" href="#bow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">text_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;I love Brazil. Brazil!&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>                      <span class="s1">&#39;Sweden is best&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>                      <span class="s1">&#39;Germany beats both&#39;</span><span class="p">])</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="c1"># BoW特徴量行列を作成</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="n">count</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="n">bag_of_words</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">text_data</span><span class="p">)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="c1"># 特徴量行列を表示</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="n">bag_of_words</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="c1">##########</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="n">bag_of_words</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="c1">##########</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="c1"># 特徴量名を表示</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="n">count</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="c1">##########</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="c1"># パラメータを指定して特徴量行列を作成</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="n">count_2gram</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a>                              <span class="n">stop_words</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a>                              <span class="n">vocabulary</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;brazil&#39;</span><span class="p">])</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="n">bag</span> <span class="o">=</span> <span class="n">count_2gram</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">text_data</span><span class="p">)</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="c1"># 特徴量行列を表示</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="n">bag</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="c1">##########</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="c1"># 1-gramと2-gramを表示</span>
+<a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="n">count_2gram</span><span class="o">.</span><span class="n">vocabulary_</span>
+</code></pre></div>
+<h3 id="tfidf">単語への重み付け（TFIDF)<a class="headerlink" href="#tfidf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="c1"># テキストを生成</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">text_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;I love Brazil. Brazil!&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>                      <span class="s1">&#39;Sweden is best&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>                      <span class="s1">&#39;Germany beats both&#39;</span><span class="p">])</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="c1"># tf-idf特徴量行列を作成</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="n">feature_matrix</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">text_data</span><span class="p">)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="c1"># tf-idf特徴量行列を表示</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="n">feature_matrix</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="c1">##########</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="c1"># tf-idf特徴量行列を密行列として表示</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="n">feature_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="c1">##########</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="c1"># 特徴量名を表示</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="n">tfidf</span><span class="o">.</span><span class="n">vocabulary_</span>
+</code></pre></div>
+<h3 id="_7">全角・半角への変換<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># -*- coding: utf-8 -*-</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1"># ライブラリをロード</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kn">from</span> <span class="nn">nltk.stem.porter</span> <span class="kn">import</span> <span class="n">PorterStemmer</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="c1"># 単語トークンを作成</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">tokenized_words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;am&#39;</span><span class="p">,</span> <span class="s1">&#39;humbled&#39;</span><span class="p">,</span> <span class="s1">&#39;by&#39;</span><span class="p">,</span> <span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="s1">&#39;traditional&#39;</span><span class="p">,</span> <span class="s1">&#39;meeting&#39;</span><span class="p">]</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="c1"># 語幹抽出器を作成</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="n">porter</span> <span class="o">=</span> <span class="n">PorterStemmer</span><span class="p">()</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="c1"># 語幹抽出器を適用</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="p">[</span><span class="n">porter</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokenized_words</span><span class="p">]</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../sk_basic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scikit-learn Basic" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Scikit-learn Basic
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../ts_basic/" class="md-footer__link md-footer__link--next" aria-label="Next: Time-series Basic" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Time-series Basic
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      (c) 2021 BrainSnacks, All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+    
+  </body>
+</html>

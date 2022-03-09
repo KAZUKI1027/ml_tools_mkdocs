@@ -1,0 +1,1658 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.3">
+    
+    
+      
+        <title>LGBM Reg Templete - MY_PYTHON_TOOLS_SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lgbm-regression-template" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MY_PYTHON_TOOLS_SDK" class="md-header__button md-logo" aria-label="MY_PYTHON_TOOLS_SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MY_PYTHON_TOOLS_SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LGBM Reg Templete
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MY_PYTHON_TOOLS_SDK" class="md-nav__button md-logo" aria-label="MY_PYTHON_TOOLS_SDK" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    MY_PYTHON_TOOLS_SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Bash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bash" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Bash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_command/" class="md-nav__link">
+        Git Command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Data Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Analysis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general_data_analysis/" class="md-nav__link">
+        General Data Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numpy_basic/" class="md-nav__link">
+        Numpy Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pandas_basic/" class="md-nav__link">
+        Pandas Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualize_basic/" class="md-nav__link">
+        Matplot/Seaborn Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sk_basic/" class="md-nav__link">
+        Scikit-learn Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp_basic/" class="md-nav__link">
+        NLP Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ts_basic/" class="md-nav__link">
+        Time-series Basic
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          ML Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ML Model" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          ML Model
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          LGBM Reg Templete
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        LGBM Reg Templete
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kaggle-electric-price-prediction" class="md-nav__link">
+    時系列データの予測 (Kaggle Electric Price Prediction)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-load_data" class="md-nav__link">
+    0. Load_Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-confirmation-pre-treatment" class="md-nav__link">
+    1. Data Confirmation &amp; Pre-Treatment
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Data Confirmation &amp; Pre-Treatment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-energy-dataset" class="md-nav__link">
+    1.1 Energy Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-weather-data" class="md-nav__link">
+    1.2 Weather Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-merge-two-datasets" class="md-nav__link">
+    1.3 Merge Two Datasets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualization-and-time-series-analysis" class="md-nav__link">
+    2. Visualization and Time Series Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-feature-engineering" class="md-nav__link">
+    3. Feature Engineering
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-time-features" class="md-nav__link">
+    3.1 Time Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-make-lag-feature" class="md-nav__link">
+    3.2 Make Lag Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-encording" class="md-nav__link">
+    3.3 Encording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-apply-feature-enginering-to-dataset" class="md-nav__link">
+    3.4 Apply Feature Enginering to Dataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-model-development" class="md-nav__link">
+    4. Model Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-training" class="md-nav__link">
+    5. Training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inference" class="md-nav__link">
+    6. Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-make-submit-file" class="md-nav__link">
+    7. Make Submit File
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lgb_template_cls/" class="md-nav__link">
+        LGBM Cls Template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        Stats Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nn/" class="md-nav__link">
+        NN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        NLP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../timeseries/" class="md-nav__link">
+        Time Series
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Others
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Others" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web_scrp/" class="md-nav__link">
+        Web Scriping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cas_inf/" class="md-nav__link">
+        Casual Inference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kaggle-electric-price-prediction" class="md-nav__link">
+    時系列データの予測 (Kaggle Electric Price Prediction)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0-load_data" class="md-nav__link">
+    0. Load_Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-data-confirmation-pre-treatment" class="md-nav__link">
+    1. Data Confirmation &amp; Pre-Treatment
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Data Confirmation &amp; Pre-Treatment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-energy-dataset" class="md-nav__link">
+    1.1 Energy Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-weather-data" class="md-nav__link">
+    1.2 Weather Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-merge-two-datasets" class="md-nav__link">
+    1.3 Merge Two Datasets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualization-and-time-series-analysis" class="md-nav__link">
+    2. Visualization and Time Series Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-feature-engineering" class="md-nav__link">
+    3. Feature Engineering
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-time-features" class="md-nav__link">
+    3.1 Time Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-make-lag-feature" class="md-nav__link">
+    3.2 Make Lag Feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-encording" class="md-nav__link">
+    3.3 Encording
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-apply-feature-enginering-to-dataset" class="md-nav__link">
+    3.4 Apply Feature Enginering to Dataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-model-development" class="md-nav__link">
+    4. Model Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-training" class="md-nav__link">
+    5. Training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inference" class="md-nav__link">
+    6. Inference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-make-submit-file" class="md-nav__link">
+    7. Make Submit File
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="lgbm-regression-template">LGBM Regression Template<a class="headerlink" href="#lgbm-regression-template" title="Permanent link">&para;</a></h1>
+<h2 id="kaggle-electric-price-prediction">時系列データの予測 (Kaggle Electric Price Prediction)<a class="headerlink" href="#kaggle-electric-price-prediction" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">#data analysis libraries</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">#最大表示列数の指定（ここでは50列を指定）</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1">#visualization libraries</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">#machinelearning libraries</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">TimeSeriesSplit</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="kn">from</span> <span class="nn">statsmodels.graphics.tsaplots</span> <span class="kn">import</span> <span class="n">plot_acf</span><span class="p">,</span> <span class="n">plot_pacf</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lgb</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="kn">import</span> <span class="nn">category_encoders</span> <span class="k">as</span> <span class="nn">ce</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="kn">import</span> <span class="nn">tqdm</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="kn">import</span> <span class="nn">warnings</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="n">warnings</span><span class="o">.</span><span class="n">resetwarnings</span><span class="p">()</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="ne">FutureWarning</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="ne">UserWarning</span><span class="p">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="0-load_data">0. Load_Data<a class="headerlink" href="#0-load_data" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># azureml-core のバージョン 1.0.72 以上が必要です</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1"># バージョン 1.1.34 以降の azureml-dataprep[pandas] が必要です</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">azureml.core</span> <span class="kn">import</span> <span class="n">Workspace</span><span class="p">,</span> <span class="n">Dataset</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">subscription_id</span> <span class="o">=</span> <span class="s1">&#39;7c8a3124-bfd6-4ad6-9036-0ac6bc860830&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">resource_group</span> <span class="o">=</span> <span class="s1">&#39;Dept-PEN-ALG-D-RG&#39;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">workspace_name</span> <span class="o">=</span> <span class="s1">&#39;algworkspace&#39;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">workspace</span> <span class="o">=</span> <span class="n">Workspace</span><span class="p">(</span><span class="n">subscription_id</span><span class="p">,</span> <span class="n">resource_group</span><span class="p">,</span> <span class="n">workspace_name</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="n">train</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">get_by_name</span><span class="p">(</span><span class="n">workspace</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sp-act-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas_dataframe</span><span class="p">()</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">test</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">get_by_name</span><span class="p">(</span><span class="n">workspace</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sp-act-02&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">weather</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">get_by_name</span><span class="p">(</span><span class="n">workspace</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sp-act-03&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="n">sample_sub</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">get_by_name</span><span class="p">(</span><span class="n">workspace</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sp-act-04&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="1-data-confirmation-pre-treatment">1. Data Confirmation &amp; Pre-Treatment<a class="headerlink" href="#1-data-confirmation-pre-treatment" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">#Train_Dataset</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">display</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">display</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">#Test_Dataset</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">display</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">display</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">#Weather_Dataset</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">display</span><span class="p">(</span><span class="n">weather</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">display</span><span class="p">(</span><span class="n">weather</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">#Sample_submmision</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">display</span><span class="p">(</span><span class="n">sample_sub</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">display</span><span class="p">(</span><span class="n">sample_sub</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="11-energy-dataset">1.1 Energy Dataset<a class="headerlink" href="#11-energy-dataset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">#Confirm data summary</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">train</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Drop unusable columns like NaN,0</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1"># forecast data also dropped to pridict with actual data only</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">drop_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="s1">&#39;generation fossil coal-derived gas&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="s1">&#39;generation fossil oil shale&#39;</span><span class="p">,</span> 
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>            <span class="s1">&#39;generation fossil peat&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>            <span class="s1">&#39;generation geothermal&#39;</span><span class="p">,</span> 
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>            <span class="s1">&#39;generation hydro pumped storage aggregated&#39;</span><span class="p">,</span> 
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>            <span class="s1">&#39;generation marine&#39;</span><span class="p">,</span> 
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>            <span class="s1">&#39;generation wind offshore&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>            <span class="s1">&#39;forecast wind offshore eday ahead&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>            <span class="s1">&#39;total load forecast&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>            <span class="s1">&#39;forecast solar day ahead&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>            <span class="s1">&#39;forecast wind onshore day ahead&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="n">train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="n">test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">#Confirm null data rate</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">def</span> <span class="nf">get_null_df</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="sd">&quot;&quot;&quot;Calculate missing data rate</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="sd">        df (pd.DataFrame): target_df</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="sd">        col_null_df: dataframe of null_feature_rate</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="n">col_null_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Column&#39;</span><span class="p">,</span> <span class="s1">&#39;Type&#39;</span><span class="p">,</span> <span class="s1">&#39;Total NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">])</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>    <span class="n">col_null</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">col_null</span><span class="p">:</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>        <span class="n">T</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>        <span class="k">if</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s2">&quot;float64&quot;</span><span class="p">:</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>            <span class="n">T</span> <span class="o">=</span> <span class="s2">&quot;Numerical&quot;</span>  
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>        <span class="k">elif</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s2">&quot;int64&quot;</span><span class="p">:</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>            <span class="n">T</span> <span class="o">=</span> <span class="s2">&quot;Numerical&quot;</span>  
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>            <span class="n">T</span> <span class="o">=</span> <span class="s2">&quot;Categorical&quot;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>        <span class="n">nulls</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">][</span><span class="n">col</span><span class="p">])</span>   
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>        <span class="n">col_null_df</span> <span class="o">=</span> <span class="n">col_null_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Column&#39;</span><span class="p">:</span> <span class="n">col</span><span class="p">,</span> 
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>                                        <span class="s1">&#39;Type&#39;</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>                                        <span class="s1">&#39;Total NaN&#39;</span><span class="p">:</span> <span class="n">nulls</span><span class="p">,</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>                                        <span class="s1">&#39;%&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">nulls</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a>                                        <span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a>    <span class="k">return</span> <span class="n">col_null_df</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Train_data&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="n">display</span><span class="p">(</span><span class="n">get_null_df</span><span class="p">(</span><span class="n">train</span><span class="p">))</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test_data&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="n">display</span><span class="p">(</span><span class="n">get_null_df</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">#Fill NaN values with ffill</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">time_train</span><span class="o">=</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">time_test</span><span class="o">=</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">train</span><span class="o">=</span><span class="n">train</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">limit_direction</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">test</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">limit_direction</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">train</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="n">time_train</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">test</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="n">time_test</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="12-weather-data">1.2 Weather Data<a class="headerlink" href="#12-weather-data" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">#Confirm data summary</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">weather</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">get_unique_df</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="sd">&quot;&quot;&quot;Show unique column data</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="sd">    Args:</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="sd">        df (pd.dataFrame):target_df </span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="sd">        unique_df: unique_df_columns</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="n">unique_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Feature&#39;</span><span class="p">,</span> <span class="s1">&#39;Unique&#39;</span><span class="p">,</span> <span class="s1">&#39;Count&#39;</span><span class="p">])</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>        <span class="n">v</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>        <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>        <span class="n">unique_df</span> <span class="o">=</span> <span class="n">unique_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;Feature&#39;</span><span class="p">:</span><span class="n">col</span><span class="p">,</span> 
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>                                    <span class="s1">&#39;Unique&#39;</span><span class="p">:</span><span class="n">v</span><span class="p">,</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>                                    <span class="s1">&#39;Count&#39;</span><span class="p">:</span><span class="n">l</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>    <span class="k">return</span> <span class="n">unique_df</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="n">get_unique_df</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">weather</span><span class="o">.</span><span class="n">columns</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># Drop unusable columns </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">drop_columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">weather</span> <span class="o">=</span> <span class="n">weather</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">#Confirm null data rate</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weather_data&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">display</span><span class="p">(</span><span class="n">get_null_df</span><span class="p">(</span><span class="n">weather</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">#delete indent</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">weather</span><span class="o">=</span><span class="n">weather</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;Barcelona&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">city_name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Valencia&quot;</span><span class="p">,</span> <span class="s2">&quot;Madrid&quot;</span><span class="p">,</span> <span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span> <span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;Seville&quot;</span><span class="p">]</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">city_name</span><span class="p">:</span>    
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">city</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">weather</span><span class="p">[</span><span class="n">weather</span><span class="o">.</span><span class="n">city_name</span><span class="o">==</span><span class="n">city</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">))))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">#make all city weather data frame</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="c1">#adjust time frame to Valencia(Min data number)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">def</span> <span class="nf">make_weather_dataset</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">city_name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span> <span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span> <span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;Seville&quot;</span><span class="p">,</span><span class="s2">&quot;Valencia&quot;</span><span class="p">]):</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>    <span class="n">df_concat</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>    <span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">city_name</span><span class="p">:</span>        
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>        <span class="n">city_df</span><span class="o">=</span><span class="n">weather</span><span class="p">[</span><span class="n">weather</span><span class="o">.</span><span class="n">city_name</span><span class="o">==</span><span class="n">city</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>        <span class="n">dt_iso</span><span class="o">=</span><span class="n">city_df</span><span class="p">[</span><span class="s2">&quot;dt_iso&quot;</span><span class="p">]</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>        <span class="n">city_df</span><span class="o">=</span><span class="n">city_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;city_name&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>        <span class="n">city_df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span><span class="o">+</span> <span class="n">city</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">city_df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>        <span class="n">df_concat</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_concat</span><span class="p">,</span><span class="n">city_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>    <span class="n">df_concat</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="n">dt_iso</span><span class="p">)</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>    <span class="n">df_concat</span><span class="o">=</span><span class="n">df_concat</span><span class="p">[</span><span class="o">~</span><span class="n">df_concat</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>    <span class="n">df_concat</span><span class="o">=</span><span class="n">df_concat</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="k">return</span> <span class="n">df_concat</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="n">weather_concat</span><span class="o">=</span><span class="n">make_weather_dataset</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">weather_concat</span>
+</code></pre></div>
+<h3 id="13-merge-two-datasets">1.3 Merge Two Datasets<a class="headerlink" href="#13-merge-two-datasets" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">#change date datatype</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">train</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">weather_concat</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">weather_concat</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="c1">#concat with weather_df</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="n">train_all</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="n">weather_concat</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="n">test_all</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="n">weather_concat</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="c1"># train_all=train_all.loc[:,~train_all.columns.duplicated()]</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="c1"># test_all=test_all.loc[:,~test_all.columns.duplicated()]</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="n">display</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="n">display</span><span class="p">(</span><span class="n">train_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="n">display</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="n">display</span><span class="p">(</span><span class="n">test_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="2-visualization-and-time-series-analysis">2. Visualization and Time Series Analysis<a class="headerlink" href="#2-visualization-and-time-series-analysis" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1">#Confirm Distribution of train &amp; test dataset</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">def</span> <span class="nf">get_numeric_features_plot</span><span class="p">(</span><span class="n">train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">cont_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">figsize</span><span class="p">,</span><span class="n">hspace</span><span class="o">=</span><span class="mf">.3</span><span class="p">):</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>    <span class="sd">&quot;&quot;&quot;Show Numeric Features Distribution</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="sd">        train (pd.DataFrame): train_df</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="sd">        test (pd.DataFrame): test_df</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="sd">        cont_features (list): target_features</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="sd">        height ([type]): plot_height</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="sd">        figsize ([type]): plot_size</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="sd">        hspace (float, optional): space of figs. Defaults to .3.</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    <span class="n">ncols</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>    <span class="n">nrows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cont_features</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a>        <span class="n">ncols</span><span class="o">=</span><span class="n">ncols</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">height</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">*</span><span class="n">nrows</span><span class="p">))</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="n">hspace</span><span class="p">)</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cont_features</span><span class="p">):</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a>        <span class="c1"># Distribution of target features</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a>        <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Train&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a>                        <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#e74c3c&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a>        <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">feature</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Test&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a>                        <span class="n">hist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#2ecc71&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">figsize</span><span class="p">})</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">figsize</span><span class="p">})</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution of </span><span class="si">{}</span><span class="s1"> Feature&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36"></a>            <span class="n">feature</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">)</span>
+<a id="__codelineno-16-37" name="__codelineno-16-37"></a>
+<a id="__codelineno-16-38" name="__codelineno-16-38"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1">#Get only float and int columns</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">cont_features</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">train_all</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;float&#39;</span> <span class="ow">or</span> <span class="s1">&#39;int&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">cont_features</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;price actual&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="n">get_numeric_features_plot</span><span class="p">(</span><span class="n">train_all</span><span class="p">,</span><span class="n">test_all</span><span class="p">,</span><span class="n">cont_features</span><span class="o">=</span><span class="n">cont_features</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.7</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a> <span class="c1"># Categorical Features</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="k">def</span> <span class="nf">get_categorical_features_plot</span><span class="p">(</span><span class="n">train</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">cat_features</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">figsize</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">.3</span><span class="p">):</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>    <span class="sd">&quot;&quot;&quot;Show Numeric Features Distribution</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="sd">    Args:</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="sd">        train (pd.DataFrame): train_df</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="sd">        test (pd.DataFrame): test_df</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="sd">        cat_features (list): target_features</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="sd">        height ([type]): plot_height</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="sd">        figsize ([type]): plot_size</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="sd">        hspace (float, optional): space of figs. Defaults to .3.</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14"></a>    <span class="n">ncols</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15"></a>    <span class="n">nrows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cat_features</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16"></a>    <span class="n">train</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17"></a>    <span class="n">test</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18"></a>    <span class="n">whole_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a>
+<a id="__codelineno-18-20" name="__codelineno-18-20"></a>    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21"></a>        <span class="n">ncols</span><span class="o">=</span><span class="n">ncols</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">height</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">*</span><span class="n">nrows</span><span class="p">))</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">right</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="n">hspace</span><span class="p">)</span>
+<a id="__codelineno-18-23" name="__codelineno-18-23"></a>
+<a id="__codelineno-18-24" name="__codelineno-18-24"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cat_features</span><span class="p">):</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">nrows</span><span class="p">,</span> <span class="n">ncols</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26"></a>
+<a id="__codelineno-18-27" name="__codelineno-18-27"></a>        <span class="c1"># Distribution of target features</span>
+<a id="__codelineno-18-28" name="__codelineno-18-28"></a>        <span class="n">ax</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">whole_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">feature</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;type&quot;</span><span class="p">)</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">(),</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+<a id="__codelineno-18-33" name="__codelineno-18-33"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+<a id="__codelineno-18-34" name="__codelineno-18-34"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">figsize</span><span class="p">})</span>
+<a id="__codelineno-18-35" name="__codelineno-18-35"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">figsize</span><span class="p">})</span>
+<a id="__codelineno-18-36" name="__codelineno-18-36"></a>        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Count of </span><span class="si">{}</span><span class="s1"> Feature&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">)</span>
+<a id="__codelineno-18-37" name="__codelineno-18-37"></a>
+<a id="__codelineno-18-38" name="__codelineno-18-38"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1">#Get only object columns</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">cat_features</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">train_all</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="n">get_categorical_features_plot</span><span class="p">(</span><span class="n">train_all</span><span class="p">,</span><span class="n">test_all</span><span class="p">,</span><span class="n">cat_features</span><span class="o">=</span><span class="n">cat_features</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">1.3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">#Autocorrelation (3 yeasrs 2015-2017)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">rolling</span> <span class="o">=</span> <span class="n">train_all</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rolling</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Weekly rolling mean&#39;</span><span class="p">)</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;price actual&quot;</span><span class="p">)</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="n">plot_acf</span><span class="p">(</span><span class="n">train_all</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="n">plot_pacf</span><span class="p">(</span><span class="n">train_all</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">)</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a>
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1">#Autocorrelation (1 year 2015)</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">train_2015</span><span class="o">=</span><span class="n">train_all</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">8760</span><span class="p">,:]</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="n">rolling</span> <span class="o">=</span> <span class="n">train_2015</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">24</span><span class="o">*</span><span class="mi">7</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rolling</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Weekly rolling mean&#39;</span><span class="p">)</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;price actual&quot;</span><span class="p">)</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="n">plot_acf</span><span class="p">(</span><span class="n">train_2015</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="n">plot_pacf</span><span class="p">(</span><span class="n">train_2015</span><span class="p">[</span><span class="s1">&#39;price actual&#39;</span><span class="p">],</span> <span class="n">lags</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">)</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="c1"># Find the correlations between the electricity price and the rest of the features</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">correlations</span> <span class="o">=</span> <span class="n">train_all</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="n">highly_correlated</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">correlations</span><span class="p">[</span><span class="n">correlations</span> <span class="o">&gt;</span> <span class="mf">0.7</span><span class="p">])</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">highly_correlated</span><span class="p">[</span><span class="n">highly_correlated</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">]</span><span class="o">.</span><span class="n">stack</span><span class="p">())</span>
+</code></pre></div>
+<h2 id="3-feature-engineering">3. Feature Engineering<a class="headerlink" href="#3-feature-engineering" title="Permanent link">&para;</a></h2>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">class</span> <span class="nc">CONFIG</span><span class="p">:</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>    <span class="n">exp</span><span class="o">=</span><span class="s2">&quot;exp11&quot;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>    <span class="n">lag</span><span class="o">=</span><span class="mi">168</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="n">fold</span><span class="o">=</span><span class="mi">3</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>    <span class="n">depth</span><span class="o">=</span><span class="mi">3</span>
+</code></pre></div>
+<h3 id="31-time-features">3.1 Time Features<a class="headerlink" href="#31-time-features" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="c1">## Make Time features by sin/cos</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">def</span> <span class="nf">make_time</span><span class="p">(</span><span class="n">input_df</span><span class="p">):</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">input_df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>    <span class="c1">#output_df[&quot;weekday&quot;]=&quot;&quot;</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>    <span class="c1"># for i in range(len(output_df)):</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>    <span class="c1">#     position = output_df[&quot;time&quot;][i]</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>    <span class="c1">#     weekday = position.weekday()</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>    <span class="c1">#     if (weekday == 6):</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a>    <span class="c1">#         output_df.loc[position, &#39;weekday&#39;] = 2</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>    <span class="c1">#     elif (weekday == 5):</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a>    <span class="c1">#         output_df.loc[position, &#39;weekday&#39;] = 1</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a>    <span class="c1">#     else:</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a>    <span class="c1">#         output_df.loc[position, &#39;weekday&#39;] = 0</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">month</span><span class="p">)</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a>
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a>    <span class="c1">#Monthyly trend by Day</span>
+<a id="__codelineno-24-25" name="__codelineno-24-25"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month_sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">31</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month_cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">31</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27"></a>
+<a id="__codelineno-24-28" name="__codelineno-24-28"></a>    <span class="c1">#Yearly trend by Month</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;year_sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-30" name="__codelineno-24-30"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;year_cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">12</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31"></a>
+<a id="__codelineno-24-32" name="__codelineno-24-32"></a>    <span class="c1">#Quater trend by month</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;quater_sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;quater_cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-35" name="__codelineno-24-35"></a>
+<a id="__codelineno-24-36" name="__codelineno-24-36"></a>    <span class="c1">#Half Yearly trend by Month</span>
+<a id="__codelineno-24-37" name="__codelineno-24-37"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;half_sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-38" name="__codelineno-24-38"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;half_cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-39" name="__codelineno-24-39"></a>
+<a id="__codelineno-24-40" name="__codelineno-24-40"></a>    <span class="c1">#2 Month Trend by Month</span>
+<a id="__codelineno-24-41" name="__codelineno-24-41"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;2month_sin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-42" name="__codelineno-24-42"></a>    <span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;2month_cos&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">output_df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span>
+<a id="__codelineno-24-43" name="__codelineno-24-43"></a>
+<a id="__codelineno-24-44" name="__codelineno-24-44"></a>
+<a id="__codelineno-24-45" name="__codelineno-24-45"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">])</span>
+<a id="__codelineno-24-46" name="__codelineno-24-46"></a>    <span class="c1"># print(input_df.shape)</span>
+<a id="__codelineno-24-47" name="__codelineno-24-47"></a>    <span class="c1"># print(output_df.shape)</span>
+<a id="__codelineno-24-48" name="__codelineno-24-48"></a>    <span class="c1"># print(len(input_df.columns.unique()))</span>
+<a id="__codelineno-24-49" name="__codelineno-24-49"></a>    <span class="c1"># print(len(output_df.columns.unique()))</span>
+<a id="__codelineno-24-50" name="__codelineno-24-50"></a>
+<a id="__codelineno-24-51" name="__codelineno-24-51"></a>    <span class="k">return</span> <span class="n">output_df</span>
+</code></pre></div>
+<h3 id="32-make-lag-feature">3.2 Make Lag Feature<a class="headerlink" href="#32-make-lag-feature" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">def</span> <span class="nf">make_lag</span><span class="p">(</span><span class="n">input_df</span><span class="p">):</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    <span class="c1">#Select only highly correlated columns for lag features</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    <span class="n">targets</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">highly_correlated</span><span class="p">[</span><span class="n">highly_correlated</span> <span class="o">&lt;</span> <span class="mf">1.0</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    <span class="n">targets</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;price actual&quot;</span><span class="p">)</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>    <span class="c1">#1 day</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>    <span class="c1">#shift_time=args.lag</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>    <span class="n">shift_time</span><span class="o">=</span><span class="n">CONFIG</span><span class="o">.</span><span class="n">lag</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">input_df</span><span class="p">[</span><span class="n">targets</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a>    <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">targets</span><span class="p">:</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">shift_time</span><span class="p">):</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>            <span class="n">output_df</span><span class="p">[</span><span class="n">target</span><span class="o">+</span><span class="sa">f</span><span class="s2">&quot;_lag</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">output_df</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="nb">len</span><span class="p">(</span><span class="n">targets</span><span class="p">):]</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a>    <span class="k">return</span> <span class="n">output_df</span>
+</code></pre></div>
+<h3 id="33-encording">3.3 Encording<a class="headerlink" href="#33-encording" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">def</span> <span class="nf">label_encoding</span><span class="p">(</span><span class="n">input_df</span><span class="p">):</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    <span class="n">target_cols</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    <span class="n">features</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="n">target_cols</span><span class="p">]</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">OrdinalEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>    <span class="n">output_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">target_cols</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">output_df</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s2">&quot;LE_&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">input_df</span><span class="p">,</span> <span class="n">output_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">target_cols</span><span class="p">):]</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a>
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a>    <span class="k">return</span> <span class="n">output_df</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a>
+<a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="k">def</span> <span class="nf">count_encoding</span><span class="p">(</span><span class="n">input_df</span><span class="p">):</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a>    <span class="n">target_cols</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19"></a>    <span class="n">features</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="n">target_cols</span><span class="p">]</span>
+<a id="__codelineno-26-20" name="__codelineno-26-20"></a>    <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">CountEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<a id="__codelineno-26-21" name="__codelineno-26-21"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<a id="__codelineno-26-22" name="__codelineno-26-22"></a>    <span class="n">output_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">target_cols</span>
+<a id="__codelineno-26-23" name="__codelineno-26-23"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">output_df</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s2">&quot;CE_&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-24" name="__codelineno-26-24"></a>
+<a id="__codelineno-26-25" name="__codelineno-26-25"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">input_df</span><span class="p">,</span> <span class="n">output_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-26-26" name="__codelineno-26-26"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">target_cols</span><span class="p">):]</span>
+<a id="__codelineno-26-27" name="__codelineno-26-27"></a>
+<a id="__codelineno-26-28" name="__codelineno-26-28"></a>    <span class="k">return</span> <span class="n">output_df</span>
+<a id="__codelineno-26-29" name="__codelineno-26-29"></a>
+<a id="__codelineno-26-30" name="__codelineno-26-30"></a>
+<a id="__codelineno-26-31" name="__codelineno-26-31"></a><span class="k">def</span> <span class="nf">target_encoding</span><span class="p">(</span><span class="n">input_df</span><span class="p">):</span>
+<a id="__codelineno-26-32" name="__codelineno-26-32"></a>
+<a id="__codelineno-26-33" name="__codelineno-26-33"></a>    <span class="n">target_cols</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-26-34" name="__codelineno-26-34"></a>    <span class="n">features</span> <span class="o">=</span> <span class="n">input_df</span><span class="p">[</span><span class="n">target_cols</span><span class="p">]</span>
+<a id="__codelineno-26-35" name="__codelineno-26-35"></a>    <span class="n">target</span><span class="o">=</span><span class="n">input_df</span><span class="p">[</span><span class="s2">&quot;price actual&quot;</span><span class="p">]</span>
+<a id="__codelineno-26-36" name="__codelineno-26-36"></a>    <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">TargetEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+<a id="__codelineno-26-37" name="__codelineno-26-37"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<a id="__codelineno-26-38" name="__codelineno-26-38"></a>    <span class="n">output_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">target_cols</span>
+<a id="__codelineno-26-39" name="__codelineno-26-39"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">output_df</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s2">&quot;TE_&quot;</span><span class="p">)</span>
+<a id="__codelineno-26-40" name="__codelineno-26-40"></a>
+<a id="__codelineno-26-41" name="__codelineno-26-41"></a>    <span class="n">output_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">input_df</span><span class="p">,</span> <span class="n">output_df</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-26-42" name="__codelineno-26-42"></a>    <span class="n">output_df</span><span class="o">=</span><span class="n">output_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">target_cols</span><span class="p">):]</span>
+<a id="__codelineno-26-43" name="__codelineno-26-43"></a>
+<a id="__codelineno-26-44" name="__codelineno-26-44"></a>    <span class="k">return</span> <span class="n">output_df</span>
+</code></pre></div>
+<h3 id="34-apply-feature-enginering-to-dataset">3.4 Apply Feature Enginering to Dataset<a class="headerlink" href="#34-apply-feature-enginering-to-dataset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>        <span class="n">input_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">train</span><span class="p">,</span> <span class="n">test</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>        <span class="n">funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">make_time</span><span class="p">,</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a>                <span class="n">label_encoding</span><span class="p">,</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a>                <span class="n">count_encoding</span><span class="p">,</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>                <span class="n">target_encoding</span><span class="p">,</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a>                <span class="n">make_lag</span><span class="p">]</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a>        <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a>        <span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">funcs</span><span class="p">):</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a>                <span class="n">_df</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">input_df</span><span class="p">)</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a>                <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_df</span><span class="p">)</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a>        <span class="n">output</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a>        <span class="n">output</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">input_df</span><span class="p">,</span><span class="n">output</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a>
+<a id="__codelineno-27-16" name="__codelineno-27-16"></a>        <span class="c1"># output=standard_scaler(output)</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17"></a>        <span class="c1"># output=select_features(output)</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18"></a>        <span class="n">drop_cols</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">input_df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19"></a>        <span class="n">output</span><span class="o">=</span><span class="n">output</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">drop_cols</span><span class="p">)</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20"></a>
+<a id="__codelineno-27-21" name="__codelineno-27-21"></a>
+<a id="__codelineno-27-22" name="__codelineno-27-22"></a>
+<a id="__codelineno-27-23" name="__codelineno-27-23"></a>        <span class="n">train_x</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">)]</span>
+<a id="__codelineno-27-24" name="__codelineno-27-24"></a>        <span class="n">test_x</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="p">):]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-27-25" name="__codelineno-27-25"></a>        <span class="n">test_x</span><span class="o">=</span><span class="n">test_x</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;price actual&quot;</span><span class="p">])</span>
+<a id="__codelineno-27-26" name="__codelineno-27-26"></a>
+<a id="__codelineno-27-27" name="__codelineno-27-27"></a>        <span class="k">return</span> <span class="n">train_x</span><span class="p">,</span> <span class="n">test_x</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">train_x</span><span class="p">,</span> <span class="n">test_x</span><span class="o">=</span><span class="n">preprocess</span><span class="p">(</span><span class="n">train_all</span><span class="p">,</span><span class="n">test_all</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">train_x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">test_x</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="4-model-development">4. Model Development<a class="headerlink" href="#4-model-development" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">train_x</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 26305 entries, 0 to 26304
+Columns: 3162 entries, time to temp_max_Valencia_lag168
+dtypes: datetime64[ns](1), float64(3120), int64(25), object(16)
+memory usage: 634.6+ MB
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="c1">#Get Categorical features</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">cat_col</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="n">train_x</span><span class="p">[</span><span class="n">cat_col</span><span class="p">]</span><span class="o">=</span><span class="n">train_x</span><span class="p">[</span><span class="n">cat_col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="n">test_x</span><span class="p">[</span><span class="n">cat_col</span><span class="p">]</span><span class="o">=</span><span class="n">test_x</span><span class="p">[</span><span class="n">cat_col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="c1">#Get Columns for Predict </span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="n">pred_col</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">train_x</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="n">pred_col</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;price actual&quot;</span><span class="p">)</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="n">pred_col</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="c1"># ====================================================</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="c1"># Model Preparation</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="c1"># ====================================================</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="k">class</span> <span class="nc">SingleLgb</span><span class="p">:</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cat_col</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">71</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">train_param</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a>        <span class="k">if</span> <span class="n">dry_run</span><span class="p">:</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">num_rounds</span> <span class="o">=</span> <span class="mi">2000</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">num_rounds</span> <span class="o">=</span> <span class="mi">10000</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cat_col</span><span class="o">=</span><span class="n">cat_col</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13"></a>
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a>    <span class="k">def</span> <span class="nf">do_train_direct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a>        <span class="n">lgb_train</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<a id="__codelineno-33-16" name="__codelineno-33-16"></a>        <span class="n">lgb_eval</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a>
+<a id="__codelineno-33-18" name="__codelineno-33-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Start training...&#39;</span><span class="p">)</span>
+<a id="__codelineno-33-19" name="__codelineno-33-19"></a>        <span class="c1">#LOGGER.info(&#39;Start training...&#39;)</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">lgb</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_param</span><span class="p">,</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a>                          <span class="n">lgb_train</span><span class="p">,</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22"></a>                          <span class="n">valid_sets</span><span class="o">=</span><span class="p">[</span><span class="n">lgb_eval</span><span class="p">],</span>
+<a id="__codelineno-33-23" name="__codelineno-33-23"></a>                          <span class="n">verbose_eval</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<a id="__codelineno-33-24" name="__codelineno-33-24"></a>                          <span class="n">num_boost_round</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_rounds</span><span class="p">,</span>
+<a id="__codelineno-33-25" name="__codelineno-33-25"></a>                          <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<a id="__codelineno-33-26" name="__codelineno-33-26"></a>                          <span class="n">categorical_feature</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_col</span>
+<a id="__codelineno-33-27" name="__codelineno-33-27"></a>                         <span class="p">)</span>
+<a id="__codelineno-33-28" name="__codelineno-33-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End training...&#39;</span><span class="p">)</span>
+<a id="__codelineno-33-29" name="__codelineno-33-29"></a>        <span class="c1">#LOGGER.info(&#39;End training...&#39;)</span>
+<a id="__codelineno-33-30" name="__codelineno-33-30"></a>        <span class="k">return</span> <span class="n">model</span>
+<a id="__codelineno-33-31" name="__codelineno-33-31"></a>
+<a id="__codelineno-33-32" name="__codelineno-33-32"></a>    <span class="nd">@staticmethod</span>
+<a id="__codelineno-33-33" name="__codelineno-33-33"></a>    <span class="k">def</span> <span class="nf">show_feature_importance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-33-34" name="__codelineno-33-34"></a>        <span class="n">fi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<a id="__codelineno-33-35" name="__codelineno-33-35"></a>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_name</span><span class="p">(),</span>
+<a id="__codelineno-33-36" name="__codelineno-33-36"></a>            <span class="s2">&quot;importance_split&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_importance</span><span class="p">(</span><span class="n">importance_type</span><span class="o">=</span><span class="s2">&quot;split&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span>
+<a id="__codelineno-33-37" name="__codelineno-33-37"></a>            <span class="s2">&quot;importance_gain&quot;</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_importance</span><span class="p">(</span><span class="n">importance_type</span><span class="o">=</span><span class="s2">&quot;gain&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span>
+<a id="__codelineno-33-38" name="__codelineno-33-38"></a>        <span class="p">})</span>
+<a id="__codelineno-33-39" name="__codelineno-33-39"></a>        <span class="n">fi</span> <span class="o">=</span> <span class="n">fi</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;importance_gain&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-33-40" name="__codelineno-33-40"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span>
+<a id="__codelineno-33-41" name="__codelineno-33-41"></a>        <span class="c1">#LOGGER.info(fi)</span>
+<a id="__codelineno-33-42" name="__codelineno-33-42"></a>
+<a id="__codelineno-33-43" name="__codelineno-33-43"></a>    <span class="nd">@staticmethod</span>
+<a id="__codelineno-33-44" name="__codelineno-33-44"></a>    <span class="k">def</span> <span class="nf">get_param</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">71</span><span class="p">):</span>
+<a id="__codelineno-33-45" name="__codelineno-33-45"></a>        <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-33-46" name="__codelineno-33-46"></a>            <span class="s1">&#39;num_leaves&#39;</span><span class="p">:</span> <span class="mi">1023</span><span class="p">,</span>
+<a id="__codelineno-33-47" name="__codelineno-33-47"></a>            <span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+<a id="__codelineno-33-48" name="__codelineno-33-48"></a>            <span class="s1">&#39;objective&#39;</span><span class="p">:</span> <span class="s1">&#39;regression&#39;</span><span class="p">,</span>
+<a id="__codelineno-33-49" name="__codelineno-33-49"></a>            <span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="s1">&#39;rmse&#39;</span><span class="p">,</span>
+<a id="__codelineno-33-50" name="__codelineno-33-50"></a>            <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="n">CONFIG</span><span class="o">.</span><span class="n">depth</span><span class="p">,</span>
+<a id="__codelineno-33-51" name="__codelineno-33-51"></a>            <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span>
+<a id="__codelineno-33-52" name="__codelineno-33-52"></a>            <span class="s2">&quot;boosting&quot;</span><span class="p">:</span> <span class="s2">&quot;gbdt&quot;</span><span class="p">,</span>
+<a id="__codelineno-33-53" name="__codelineno-33-53"></a>            <span class="s2">&quot;feature_fraction&quot;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+<a id="__codelineno-33-54" name="__codelineno-33-54"></a>            <span class="s2">&quot;verbosity&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-33-55" name="__codelineno-33-55"></a>            <span class="s2">&quot;random_state&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
+<a id="__codelineno-33-56" name="__codelineno-33-56"></a>        <span class="p">}</span>
+<a id="__codelineno-33-57" name="__codelineno-33-57"></a>
+<a id="__codelineno-33-58" name="__codelineno-33-58"></a><span class="k">class</span> <span class="nc">SingleTrainer</span><span class="p">:</span>
+<a id="__codelineno-33-59" name="__codelineno-33-59"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pred_col</span><span class="p">,</span> <span class="n">cat_col</span><span class="p">,</span><span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<a id="__codelineno-33-60" name="__codelineno-33-60"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">pred_col</span> <span class="o">=</span> <span class="n">pred_col</span>
+<a id="__codelineno-33-61" name="__codelineno-33-61"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">target_col</span> <span class="o">=</span> <span class="s1">&#39;price actual&#39;</span>
+<a id="__codelineno-33-62" name="__codelineno-33-62"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span> <span class="o">=</span> <span class="n">dry_run</span>
+<a id="__codelineno-33-63" name="__codelineno-33-63"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">cat_col</span><span class="o">=</span><span class="n">cat_col</span>
+<a id="__codelineno-33-64" name="__codelineno-33-64"></a>
+<a id="__codelineno-33-65" name="__codelineno-33-65"></a>    <span class="k">def</span> <span class="nf">adjust_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-33-66" name="__codelineno-33-66"></a>        <span class="n">price_list</span><span class="o">=</span><span class="p">[]</span>
+<a id="__codelineno-33-67" name="__codelineno-33-67"></a>        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>    
+<a id="__codelineno-33-68" name="__codelineno-33-68"></a>            <span class="n">remain</span><span class="o">=</span><span class="n">item</span><span class="o">%</span><span class="mi">25</span>
+<a id="__codelineno-33-69" name="__codelineno-33-69"></a>            <span class="k">if</span> <span class="n">remain</span> <span class="o">&gt;=</span><span class="mf">12.5</span><span class="p">:</span>
+<a id="__codelineno-33-70" name="__codelineno-33-70"></a>                <span class="n">item</span><span class="o">=</span><span class="p">(</span><span class="n">item</span><span class="o">-</span><span class="n">remain</span><span class="p">)</span><span class="o">+</span><span class="mi">25</span>
+<a id="__codelineno-33-71" name="__codelineno-33-71"></a>                <span class="n">price_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<a id="__codelineno-33-72" name="__codelineno-33-72"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-33-73" name="__codelineno-33-73"></a>                <span class="n">item</span><span class="o">=</span><span class="n">item</span><span class="o">-</span><span class="n">remain</span>
+<a id="__codelineno-33-74" name="__codelineno-33-74"></a>                <span class="n">price_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<a id="__codelineno-33-75" name="__codelineno-33-75"></a>        <span class="k">return</span> <span class="n">price_list</span>
+<a id="__codelineno-33-76" name="__codelineno-33-76"></a>
+<a id="__codelineno-33-77" name="__codelineno-33-77"></a>
+<a id="__codelineno-33-78" name="__codelineno-33-78"></a>    <span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+<a id="__codelineno-33-79" name="__codelineno-33-79"></a>        <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">pred_col</span><span class="p">]</span>
+<a id="__codelineno-33-80" name="__codelineno-33-80"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">target_col</span><span class="p">]</span>
+<a id="__codelineno-33-81" name="__codelineno-33-81"></a>        <span class="n">kf</span> <span class="o">=</span> <span class="n">TimeSeriesSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="n">CONFIG</span><span class="o">.</span><span class="n">fold</span><span class="p">)</span>
+<a id="__codelineno-33-82" name="__codelineno-33-82"></a>
+<a id="__codelineno-33-83" name="__codelineno-33-83"></a>        <span class="n">models</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
+<a id="__codelineno-33-84" name="__codelineno-33-84"></a>        <span class="k">for</span> <span class="n">fold</span><span class="p">,</span> <span class="p">(</span><span class="n">train_idx</span><span class="p">,</span> <span class="n">test_idx</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">)):</span>
+<a id="__codelineno-33-85" name="__codelineno-33-85"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------&quot;</span><span class="p">)</span>
+<a id="__codelineno-33-86" name="__codelineno-33-86"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fold=&quot;</span><span class="p">,</span> <span class="n">fold</span><span class="p">)</span>
+<a id="__codelineno-33-87" name="__codelineno-33-87"></a>            <span class="c1">#LOGGER.info(&quot;---------&quot;)</span>
+<a id="__codelineno-33-88" name="__codelineno-33-88"></a>            <span class="c1">#LOGGER.info(f&quot;fold={fold}&quot;)</span>
+<a id="__codelineno-33-89" name="__codelineno-33-89"></a>            <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_idx</span><span class="p">],</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_idx</span><span class="p">]</span>
+<a id="__codelineno-33-90" name="__codelineno-33-90"></a>            <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_idx</span><span class="p">],</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">test_idx</span><span class="p">]</span>
+<a id="__codelineno-33-91" name="__codelineno-33-91"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_val</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-33-92" name="__codelineno-33-92"></a>
+<a id="__codelineno-33-93" name="__codelineno-33-93"></a>            <span class="n">lgbm</span> <span class="o">=</span> <span class="n">SingleLgb</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">71</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">,</span> <span class="n">cat_col</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat_col</span><span class="p">)</span>
+<a id="__codelineno-33-94" name="__codelineno-33-94"></a>            <span class="n">model</span> <span class="o">=</span> <span class="n">lgbm</span><span class="o">.</span><span class="n">do_train_direct</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span><span class="p">)</span>
+<a id="__codelineno-33-95" name="__codelineno-33-95"></a>            <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)</span>
+<a id="__codelineno-33-96" name="__codelineno-33-96"></a>            <span class="n">y_pred</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">adjust_price</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+<a id="__codelineno-33-97" name="__codelineno-33-97"></a>            <span class="n">score</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
+<a id="__codelineno-33-98" name="__codelineno-33-98"></a>            <span class="k">if</span> <span class="n">fold</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                
+<a id="__codelineno-33-99" name="__codelineno-33-99"></a>                <span class="n">lgbm</span><span class="o">.</span><span class="n">show_feature_importance</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<a id="__codelineno-33-100" name="__codelineno-33-100"></a>            <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<a id="__codelineno-33-101" name="__codelineno-33-101"></a>            <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<a id="__codelineno-33-102" name="__codelineno-33-102"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;fold= </span><span class="si">{</span><span class="n">fold</span><span class="si">}</span><span class="s1"> RMSE Score=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+<a id="__codelineno-33-103" name="__codelineno-33-103"></a>            <span class="c1">#LOGGER.info(f&#39;fold= {fold} | MAE Score=&#39;+str(score))</span>
+<a id="__codelineno-33-104" name="__codelineno-33-104"></a>
+<a id="__codelineno-33-105" name="__codelineno-33-105"></a>        <span class="c1">#LOGGER.info(np.mean(scores))</span>
+<a id="__codelineno-33-106" name="__codelineno-33-106"></a>
+<a id="__codelineno-33-107" name="__codelineno-33-107"></a>        <span class="k">return</span> <span class="n">models</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="5-training">5. Training<a class="headerlink" href="#5-training" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">trainer</span> <span class="o">=</span> <span class="n">SingleTrainer</span><span class="p">(</span><span class="n">pred_col</span><span class="p">,</span> <span class="n">cat_col</span><span class="o">=</span><span class="n">cat_col</span><span class="p">,</span><span class="n">dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">models</span><span class="p">,</span> <span class="n">score</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">train_model</span><span class="p">(</span><span class="n">train_x</span><span class="p">)</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">preds_train</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>    <span class="n">preds_train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_x</span><span class="p">[</span><span class="n">pred_col</span><span class="p">]))</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="n">pred_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">preds_train</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># モデルたちの平均をとる</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">train_x</span><span class="p">[</span><span class="s2">&quot;price actual&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Actual&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">pred_train</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predict&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">)</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="c1">#yy-plot</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="k">def</span> <span class="nf">yy_plot</span><span class="p">(</span><span class="n">y_obs</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>    <span class="n">yvalues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">y_obs</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">])</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>    <span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">yrange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">yvalues</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">yvalues</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">yvalues</span><span class="p">)</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y_obs</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.6</span><span class="p">)</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">ymin</span> <span class="o">-</span> <span class="n">yrange</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">+</span> <span class="n">yrange</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">],</span> <span class="p">[</span><span class="n">ymin</span> <span class="o">-</span> <span class="n">yrange</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">+</span> <span class="n">yrange</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">])</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a>    <span class="c1">#plt.xlim(10, 17)</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a>    <span class="c1">#plt.ylim(10,17)</span>
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;y_observed&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y_predicted&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Observed-Predicted Plot&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<a id="__codelineno-37-13" name="__codelineno-37-13"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a>
+<a id="__codelineno-37-15" name="__codelineno-37-15"></a><span class="n">yy_plot</span><span class="p">(</span><span class="n">y_obs</span><span class="o">=</span><span class="n">train_x</span><span class="p">[</span><span class="s2">&quot;price actual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">y_pred</span><span class="o">=</span><span class="n">pred_train</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="6-inference">6. Inference<a class="headerlink" href="#6-inference" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="n">preds</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>    <span class="n">preds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_x</span><span class="p">[</span><span class="n">pred_col</span><span class="p">]))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="n">pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># モデルたちの平均をとる</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">sub_df</span> <span class="o">=</span> <span class="n">sample_sub</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="n">sub_df</span><span class="p">[</span><span class="s2">&quot;predicted&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">pred</span>
+</code></pre></div>
+<h2 id="7-make-submit-file">7. Make Submit File<a class="headerlink" href="#7-make-submit-file" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="c1">#提出サンプルファイルの確認</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="n">sub_df</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="c1">#csvとして吐き出す</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="n">sub_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;submit_&quot;</span><span class="o">+</span><span class="n">CONFIG</span><span class="o">.</span><span class="n">exp</span><span class="o">+</span><span class="s2">&quot;.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../ts_basic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Time-series Basic" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Time-series Basic
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lgb_template_cls/" class="md-footer__link md-footer__link--next" aria-label="Next: LGBM Cls Template" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              LGBM Cls Template
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      (c) 2021 BrainSnacks, All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+    
+  </body>
+</html>
